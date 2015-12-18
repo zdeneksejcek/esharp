@@ -17,7 +17,7 @@ publish(Host, User, Password, LocalDir, RemoteDir) ->
 		case ftp:user(Pid, User, Password) of
 		ok ->
 			case ftp:cd(Pid, RemoteDir) of
-			ok ->w
+			ok ->
 				case file:list_dir(LocalDir) of
 				{ok, Files} ->
 					lists:foreach(fun(I) -> 
@@ -39,12 +39,12 @@ publish(Host, User, Password, LocalDir, RemoteDir) ->
 publish(File, Dir, Pid) ->
 	LocalFile = Dir ++ "/" ++ File,
 	case ftp:send(Pid, LocalFile, File) of
-	ok ->
-		ok;
-	{error, Reason} ->
-		exit({cannot,send,file,File,reason,Reason})
+		ok ->
+			ok;
+		{error, Reason} ->
+			exit({cannot,send,file,File,reason,Reason})
 	end.
 
-factorial(0) -> 1;
-factorial(N) -> 
-	N * factorial(N-1).
+fact(0) -> 1;
+fact(N) -> 
+	N * fact(N-1).

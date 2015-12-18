@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Class1.il" />
+    <Compile Include="Compiler\Attribute.cs" />
     <Compile Include="Compiler\CharReader.cs" />
     <Compile Include="Compiler\Clause.cs" />
     <Compile Include="Compiler\Expression.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ESharp.Core.Compiler
 {
-    internal class Expression
+    internal abstract class Expression
     {
 
     }

@@ -8,9 +8,11 @@ namespace ESharp.Core.Compiler
 {
     internal class Clause
     {
-        public Clause()
-        {
+        public Sequence Sequence { get; private set; }
 
+        public Clause(Sequence sequence)
+        {
+            this.Sequence = sequence;
         }
     }
 }

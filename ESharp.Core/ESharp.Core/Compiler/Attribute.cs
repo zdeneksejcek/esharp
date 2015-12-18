@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ESharp.Core.Compiler
 {
-    internal class Sequence
+    public class Attribute
     {
-        public List<Expression> Expressions { get; private set; }
-
-
     }
 }
