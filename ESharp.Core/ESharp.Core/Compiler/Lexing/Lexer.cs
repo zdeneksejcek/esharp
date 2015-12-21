@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ESharp.Core.Compiler
+namespace ESharp.Core.Compiler.Lexing
 {
     internal class Lexer
     {
         CharReader reader;
+        Token peeked = null;
 
         public Lexer(TextReader reader)
         {
@@ -18,11 +19,22 @@ namespace ESharp.Core.Compiler
 
         public Token Peek()
         {
-            return null;
+            if (this.peeked != null)
+                return this.peeked;
+
+            this.peeked = Next();
+            return this.peeked;
         }
 
         public Token Next()
         {
+            if (this.peeked != null)
+            {
+                var temp = this.peeked;
+                this.peeked = null;
+                return temp;
+            }
+
             ReadWhile(Char.IsWhiteSpace);
             if (reader.IsEOF()) return null;
             if (SkipComment())

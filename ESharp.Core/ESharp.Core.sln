@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESharp.Core", "ESharp.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESharp", "ESharp\ESharp.csproj", "{1848F5FD-F5CD-4B79-9A09-D14BEEE893FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESharp.Core.Tests", "ESharp.Core.Tests\ESharp.Core.Tests.csproj", "{BD91251E-F9E2-4DC1-8073-31F566D1A1BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1848F5FD-F5CD-4B79-9A09-D14BEEE893FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1848F5FD-F5CD-4B79-9A09-D14BEEE893FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1848F5FD-F5CD-4B79-9A09-D14BEEE893FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD91251E-F9E2-4DC1-8073-31F566D1A1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD91251E-F9E2-4DC1-8073-31F566D1A1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD91251E-F9E2-4DC1-8073-31F566D1A1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD91251E-F9E2-4DC1-8073-31F566D1A1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

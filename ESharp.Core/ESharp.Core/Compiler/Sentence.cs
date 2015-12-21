@@ -1,4 +1,4 @@
-﻿using ESharp.Core.Compiler.Expressions;
+﻿using ESharp.Core.Compiler.Lexing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace ESharp.Core.Compiler
 {
-    internal class Sequence
+    internal abstract class Sentence
     {
-        public List<Expression> Expressions { get; private set; }
-
-
     }
 }

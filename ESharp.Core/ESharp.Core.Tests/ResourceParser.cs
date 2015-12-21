@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ESharp
+namespace ESharp.Core.Tests
 {
-    class Program
+    public class ResourceParser
     {
-        static void Main(string[] args)
+        internal static Module LoadModule(string path)
         {
-            var res = ResourceReader.ReadExample1();
+            var res = ResourceReader.Read("ESharp.Core.Tests.Simple.factorial.erl");
+
             var sr = new StringReader(res);
             var lexer = new Lexer(sr);
             var parser = new Parser(lexer);
 
             var module = parser.ParseModule();
+
+            return module;
         }
     }
 }

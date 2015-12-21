@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ESharp.Core.Compiler.Lexing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,18 @@ namespace ESharp.Core.Compiler
 
         public Module ParseModule()
         {
-            tokens = GetAllTokens();
+            var sentences = new List<Sentence>();
+
+            Token token;
+            while ((token = lexer.Peek()) != null)
+            {
+                var sentence = SentenceFactory.Create(lexer);
+
+                if (sentence == null)
+                    break;
+
+                sentences.Add(sentence);
+            }
 
             return new Module();
         }
@@ -33,7 +45,5 @@ namespace ESharp.Core.Compiler
 
             return list.ToArray();
         }
-
-
     }
 }

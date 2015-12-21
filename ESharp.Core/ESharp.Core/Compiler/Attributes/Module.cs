@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ESharp.Core.Compiler
+namespace ESharp.Core.Compiler.Attributes
 {
-    internal abstract class Expression
+    internal class Module : Attribute
     {
-
     }
 }

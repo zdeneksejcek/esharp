@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ESharp.Core.Compiler
+namespace ESharp.Core.Compiler.Lexing
 {
     internal class CharReader
     {
